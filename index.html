@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS - Scripting Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="scripts.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/icon type">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="OSS Script Hub">
+    <meta property="og:description" content="OSS Script Hub - Exploit Like A Beast 💯💯💯">
+    <meta property="og:image" content="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>OSS - Script Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="styled-linkver">About</a></li>
+                    <li><a href="#services" class="styled-linkver">Services</a></li>
+                    <li><a href="#pricing" class="styled-linkver">Pricing</a></li>
+                    <li><a href="#faq" class="styled-linkver">FAQ</a></li>
+                    <li><a href="https://discord.gg/hJ9RnYAjPb" id="discord-link" class="styled-linkver">
+                        Discord <i class="fab fa-discord"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>
+                    Experience <span class="highlight">High-Quality</span> Scripting Services
+                </h2>
+                <p>We've <span class="optimized">optimized</span> our scripts for a smooth and visually stunning <span class="experience">experience</span></p>
+                <button id="learnMoreButton" onclick="scrollToPricing()" style="position: relative; margin-right: 10px;">
+                    Learn More
+                    <i class="fas fa-arrow-down" style="margin-left: 5px; font-size: 1.2em;"></i>
+                </button>
+                
+                <button id="downloadButton" onclick="redirectToDiscord()" style="position: relative;">
+                    Start Now
+                    <i class="fas fa-arrow-right" style="margin-left: 5px; font-size: 1.2em;"></i>
+                </button>                                                          
+                <div id="fadeInText" class="fade-in-text">
+                    What Are You Waiting For? <span class="gradient-text">Exploit Like A Beast!</span>
+                </div>                
+            </div>
+        </section>               
+        <section id="about" class="content">
+            <div class="container">
+                <h2><i class="fas fa-info-circle"></i> About Us</h2>
+                <p>
+                    OSS Scripting Services was established in 2021 by <span class="highlight">Primelus</span>, a developer who initially created scripts for <span class="highlight">Roblox games</span> like <span class="highlight">Bubble Gum Simulator</span>. The service expanded into <span class="highlight">web development</span> and gained recognition for <span class="highlight">high-quality solutions</span>. Over time, OSS Scripting Services has earned <span class="highlight">commissions</span>, formed valuable <span class="highlight">partnerships</span>, and continues to <span class="highlight">innovate</span> in the realm of script development.
+                </p>
+            </div>
+        </section>               
+        <section id="services" class="content">
+            <div class="container">
+                <h2><i class="fas fa-cogs colorfade-icon"></i> Our Services</h2>
+                <div class="services-container">
+                    <div class="service">
+                        <h3>Discord Bots</h3>
+                        <p>We Create Custom Discord Bots for Efficient Server Moderation.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Web Development</h3>
+                        <p>Customize and build web applications with robust functionality.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Quality Scripts</h3>
+                        <p>We ensure a smooth exploiting experience with our quality scripts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="content">
+            <div class="container">
+                <h2><i class="fas fa-dollar-sign colorfade-icon"></i> Pricing</h2>
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h3>$5 Tier (Basic)</h3>
+                        <ul>
+                            <li>Basic script package</li>
+                            <li>Access to Private forums</li>
+                            <li>Direct developer contact</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>$10 Tier (Advanced)</h3>
+                        <ul>
+                            <li>Enhanced script package</li>
+                            <li>Priority access to updates</li>
+                            <li>Direct developer contact</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>$15 Tier (Premium)</h3>
+                        <ul>
+                            <li>Premium script package</li>
+                            <li>Customization options</li>
+                            <li>Direct developer contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="content faq-container">
+            <div class="container">
+                <h2><i class="fas fa-question-circle colorfade-icon"></i> Frequently Asked Questions</h2>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>What is OSS Scripting Service? <i class="fas fa-chevron-down"></i></h3>
+                    <p>OSS Scripting Service is a provider of high-quality scripts for various applications, including Roblox games and web development.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>How can I access the scripts? <i class="fas fa-chevron-down"></i></h3>
+                    <p>You can access the scripts by subscribing to one of our pricing tiers. Once subscribed, you'll receive the scripts and support as per your tier.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>What payment methods are accepted? <i class="fas fa-chevron-down"></i></h3>
+                    <p>We accept various payment methods including credit cards, PayPal, and more.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>Can I request custom scripts? <i class="fas fa-chevron-down"></i></h3>
+                    <p>Yes, we offer customization options for scripts. Please contact us for more details.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>How do I contact support? <i class="fas fa-chevron-down"></i></h3>
+                    <p>You can contact our support team via our Discord server.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <p style="text-align: center; margin-top: 10px;" class="custom-selection">
+                With The Power Of V7 Everything Is Possbile
+            </p>
+            <div class="screenshot">
+                <div class="features-wrapper">
+                    <div class="screenshot">
+                        <img src="released.png" alt="Scripting Utility Screenshot" class="screenshot-img">
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 30px;">
+                <div style="padding: 15px 20px; border-radius: 5px; background-color: #121212; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 1px solid #fff; font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center;">
+                    <p class="blurred-text" style="color: #f0f0f0; font-size: 0.9em; margin: 0; white-space: nowrap;" id="codeText">
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/PrimelusGT/OSS/main/arsenal-obfuscated.lua"))()
+                    </p>
+                    <button class="copybtn" onclick="copyToClipboard()">
+                        Copy <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+            <h5 style="text-align: center; color: #f0f0f0; font-size: 0.9em; margin-top: 10px; text-decoration: underline;">
+                <i class="fas fa-exclamation-triangle"></i> Ensure you trust the source before running any scripts | STATUS: RELEASED 🟢
+            </h5>            
+        </section>                    
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p><i class="fas fa-copyright"></i><span class="underline"> 2024 OSS - Scripting Services. All rights reserved</span> | 
+            <a href="https://discord.gg/hJ9RnYAjPb" target="_blank" class="styled-link">
+                <i class="fab fa-discord"></i> Discord
+            </a></p>
+        </div>
+    </footer>                   
+    <script>
+        const screenshotImg = document.querySelector('.screenshot-img');
+
+        screenshotImg.addEventListener('mousemove', (e) => {
+            const rect = screenshotImg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            // Calculate rotation angles
+            const rotateX = (y - centerY) / 10; // Adjust sensitivity if needed
+            const rotateY = (centerX - x) / 10; // Adjust sensitivity if needed
+
+            // Clamp the rotation values to avoid excessive tilting
+            const clampedRotateX = Math.max(-20, Math.min(20, rotateX));
+            const clampedRotateY = Math.max(-20, Math.min(20, rotateY));
+
+            // Apply the transformation directly
+            screenshotImg.style.transform = `rotateX(${clampedRotateX}deg) rotateY(${clampedRotateY}deg)`;
+        });
+
+        screenshotImg.addEventListener('mouseleave', () => {
+            // The CSS transition will handle the smooth return to default
+            screenshotImg.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+
+        function copyToClipboard() {
+            const codeText = document.getElementById('codeText').textContent;
+            const tempInput = document.createElement('input');
+            tempInput.value = codeText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + codeText);
+        }
+    </script>
+</body>
+</html>

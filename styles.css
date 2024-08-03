@@ -1,0 +1,782 @@
+/* Start Of The CSS */
+.fa {
+    color: #ffffff !important; /* Ensures all Font Awesome icons are white */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0; /* Light text color */
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px; /* Increased padding to create more space at the bottom */
+    transition: background-color 0.4s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; /* Reduced duration to 1 second */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; /* Dark gray for scrollbar thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Lighter gray on hover */
+}
+
+header {
+    background-color: #1f1f1f; /* Dark header background */
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    border: 1px solid #333; /* Darker border */
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0e0e0; /* White text */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #e0e0e0; /* White text */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+header nav ul li a:hover {
+    color: #121212; /* Dark text */
+    background-color: #e0e0e0; /* Light background */
+}
+
+.hero {
+    color: #e0e0e0; /* Light text color */
+    height: calc(100vh - 120px); /* Adjusted height to make room for footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h2,
+.hero p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* White text */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hero button {
+    background-color: #333; /* Dark button background */
+    color: #e0e0e0; /* White text */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font */
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #555; /* Lighter dark */
+}
+
+.content {
+    padding: 4rem 0 6rem; /* Adjusted padding bottom to push content down */
+    text-align: center;
+    margin-top: 3rem; /* Added margin to the top of sections */
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #e0e0e0; /* White text */
+}
+
+.content p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #ccc; /* Light gray text */
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem; /* Added margin to the top of the services container */
+}
+
+.service {
+    background-color: #1f1f1f; /* Dark background */
+    padding: 2rem;
+    border-radius: 10px;
+    width: calc(33.33% - 2rem); /* Adjusted width to fit three services in a row */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
+.service:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Glow effect */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0e0e0; /* White text */
+    margin-bottom: 1rem;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 3rem; /* Added margin to the top of the form */
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e0e0e0; /* White text */
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #333; /* Dark border */
+    border-radius: 5px;
+    background-color: #1f1f1f; /* Dark background */
+    color: #e0e0e0; /* White text */
+}
+
+form textarea {
+    resize: none;
+}
+
+form button.submit-button {
+    align-self: center;
+    background-color: #333; /* Dark button background */
+    color: #e0e0e0; /* White text */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+form button.submit-button:hover {
+    background-color: #555; /* Lighter dark */
+}
+
+footer {
+    background-color: #1f1f1f; /* Dark footer background */
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px; /* Adjusted bottom position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    border: 1px solid #333; /* Darker border */
+    z-index: 1000;
+    text-align: center;
+    margin-top: 3rem; /* Added margin to the top of the footer */
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e0e0e0; /* White text */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for About Us section */
+#about .container {
+    padding: 4rem 0; /* Added padding top and bottom */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e0e0e0; /* White text */
+    margin-bottom: 2rem;
+}
+
+#about p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #ccc; /* Light gray text */
+    line-height: 1.8;
+}
+
+.download-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc; /* Light gray text */
+}
+
+/* Existing styles */
+.download-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc; /* Light gray text */
+}
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.pricing-card {
+    background-color: #1f1f1f; /* Dark background */
+    padding: 2rem;
+    border-radius: 10px;
+    width: calc(33.33% - 2rem); /* Adjusted width to fit three services in a row */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    transition: transform 0.3s ease;
+}
+.pricing-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Glow effect */
+    transform: scale(1.05); /* Slight zoom */
+}
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* White text */
+}
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+.pricing-card li {
+    margin-bottom: 0.5rem;
+    color: #ccc; /* Light gray text */
+}
+.services-container .service h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0; /* White text */
+}
+.services-container .service p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text */
+}
+h2 i {
+    color: #ffffff; /* Change icon color in h2 to white */
+}
+
+.faq-container {
+    margin-top: 2rem;
+}
+
+.faq-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* White text */
+}
+
+.faq-item {
+    margin-bottom: 1rem; /* Adjusted margin for smaller spacing */
+    background-color: #1f1f1f; /* Dark background */
+    border: 1px solid #333; /* Dark border */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    transition: transform 0.3s ease;
+    margin: 0 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0; /* White text */
+}
+
+.faq-item p {
+    font-size: 0.875rem;
+    color: #ccc; /* Light gray text */
+    padding: 0 0.5rem 0.5rem;
+    display: none;
+}
+
+/* New styles for availability section */
+.availability-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.availability-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.device-info {
+    text-align: center;
+}
+
+.device-icon {
+    font-size: 3rem; /* Adjust icon size */
+    margin: 0 10px; /* Adjust margin as needed */
+    color: #ffffff; /* Adjust icon color */
+}
+
+.device-name {
+    font-size: 1rem; /* Adjust font size */
+    margin-top: 0.5rem; /* Adjust spacing */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 20px; /* Position to the right */
+    bottom: 20px; /* Initially below viewport */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1e1e1e; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text */
+    padding: 20px; /* Adjust padding as needed */
+    margin: 15px; /* Spacing between containers */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1em; /* Adjusted font size for readability */
+    text-align: center;
+    border: 1px solid #444; /* Subtle border */
+    width: 400px; /* Moderately increased width */
+    height: auto; /* Adjust height to fit content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative; /* Ensure position for close button */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 20px; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.close:hover,
+.close:focus {
+    color: #e0e0e0; /* Light grey on hover */
+    text-decoration: none;
+}
+
+/* Header Style */
+.modal-content h2 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 24px; /* Larger font size */
+}
+
+/* Paragraph Style */
+.modal-content p {
+    font-size: 18px; /* Larger font size */
+}
+
+/* Default Styled Link */
+.styled-link {
+    color: #7289da; /* Custom link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+/* Hover State */
+.styled-link:hover {
+    color: #5a6ea8; /* Darker shade on hover */
+}
+
+/* Navbar Scroll State */
+.styled-linkver {
+    color: white; /* White color when navbar is scrolled */
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Move slightly down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for Fade-out Animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px); /* Move slightly down */
+    }
+}
+
+h4 {
+    font-size: 2em; /* Increased font size for the heading */
+    color: #e0e0e0; /* White text */
+}
+
+.trusted_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px; /* Increased gap between items */
+}
+
+.item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    margin-top: 10px;
+    color: #e0e0e0; /* White text */
+}
+
+.highlight {
+    background: linear-gradient(to right, #3333FF, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.optimized {
+    background: linear-gradient(to right, #FF69B4, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.experience {
+    background: linear-gradient(to right, #FFC0CB, #FF1493); /* Light pink to deep pink */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.fade-in-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff; /* Adjust color as needed */
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #FF69B4, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fade-in-text.show {
+    opacity: 1;
+}
+
+/* Button styling */
+.copybtn {
+    margin-left: 15px; /* Increased margin */
+    background-color: #333; /* Dark button background */
+    color: #e0e0e0; /* White text */
+    border: none;
+    padding: 0.6rem 1.2rem; /* Increased padding for a bigger button */
+    font-size: 1rem; /* Slightly larger font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center the icon and text vertically */
+    justify-content: center; /* Center text and icon within the button */
+}
+
+.copybtn i {
+    margin-left: 5px; /* Space between text and icon */
+}
+
+.copybtn:hover {
+    background-color: #555; /* Lighter dark */
+}
+
+/* Modal styling */
+.modal-box {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 20px; /* Position to the right */
+    top: 20px; /* Position at the top */
+    width: auto; /* Auto width */
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #1e1e1e; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text */
+    padding: 20px; /* Adjust padding as needed */
+    border-bottom: 1px solid #444; /* Subtle border */
+    border-top-left-radius: 10px; /* Rounded top corners */
+    border-top-right-radius: 10px; /* Rounded top corners */
+    font-size: 1em; /* Adjusted font size for readability */
+    text-align: center;
+    position: relative; /* Ensure position for close button */
+}
+
+/* Modal Body */
+.modal-body {
+    background-color: #1e1e1e; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text */
+    padding: 20px; /* Adjust padding as needed */
+    border-bottom-left-radius: 10px; /* Rounded bottom corners */
+    border-bottom-right-radius: 10px; /* Rounded bottom corners */
+    font-size: 1em; /* Adjusted font size for readability */
+    text-align: center;
+}
+
+/* Close Button */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 20px; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #e0e0e0; /* Light grey on hover */
+    text-decoration: none;
+}
+
+/* Header Style */
+.modal-header h2 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 24px; /* Larger font size */
+}
+
+/* Paragraph Style */
+.modal-body p {
+    font-size: 18px; /* Larger font size */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .copybtn:disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed; 
+    color: #666666; 
+    border: none; 
+} */
+
+.blurred-text {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+.blurred-text:hover {
+    filter: blur(0px);
+}
+
+/* Style for the h6 element outside the container */
+h5 {
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.screenshot-img {
+    width: 90%; /* Increased width for a larger size */
+    max-width: 900px; /* Increased max-width to allow for larger images */
+    border-radius: 10px;
+    transition: transform 0.5s ease-out, box-shadow 0.1s, border 0.1s; /* Smooth transition for transform */
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    margin: auto; /* Center horizontally */
+    display: block; /* Ensure margin: auto works */
+}
+
+.screenshot-img:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.screenshot {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes shine {
+    from {
+        background-position: -100%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+.screenshot-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 100%);
+    background-size: 200% 100%;
+    z-index: 1;
+}
+
+.screenshot-img:hover::after {
+    animation: shine 0.75s;
+}
+
+.features-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Global text selection style */
+::selection {
+    background-color: rgba(0, 162, 255, 0.3); /* Soft blue highlight */
+    color: #ffffff; /* White text color for better contrast */
+}
+
+/* Optional: Additional hover effect on body to enhance the selection appearance */
+body:hover::selection {
+    background-color: rgba(0, 162, 255, 0.5); /* Slightly more intense blue highlight */
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+}
