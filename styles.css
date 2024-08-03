@@ -780,3 +780,25 @@ body:hover::selection {
 .underline {
     text-decoration: underline;
 }
+
+.join-now-btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-flex; /* Align icon properly */
+    align-items: center; /* Align icon properly */
+    margin-top: 10px; /* Space above the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.join-now-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.join-now-btn i {
+    margin-left: 5px; /* Space between text and icon */
+}
